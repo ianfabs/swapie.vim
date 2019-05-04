@@ -1,19 +1,21 @@
-function! Swap(a, b)
+function! s:Swap(a, b)
   " execute a:b . ' | delete | '.a:a.' | put | '.a:a.' | delete | '.a:b-1.' | put' 
   execute a:a.'m'.a:b
 endfunction
 
 function! Transpose(a,b)
-  call Swap(a:a,a:b)
-  call Swap(a:b-1,a:a-1)
+  call s:Swap(a:a,a:b)
+  call s:Swap(a:b-1,a:a-1)
 endfunction
 
-command -nargs=* Swap :call Transpose(<f-args>)
+command! -nargs=* Swap :call Transpose(<f-args>)
+command! -range Tp :call Transpose(<line1>, <line2>)
+" command! -range Tp -range :call Transpose(<line1>, <line2>)
 
-" These lines are for testing
+" mom
 " i
 " love
 " you
 " so
 " much
-" mom
+" These lines are for testing
