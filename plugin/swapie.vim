@@ -9,13 +9,13 @@ function! Transpose(a,b)
 endfunction
 
 command! -nargs=* Swap :call Transpose(<f-args>)
-command! -range Tp :call Transpose(<line1>, <line2>)
+command! -range T :call Transpose(<line1>, <line2>)
 " command! -range Tp -range :call Transpose(<line1>, <line2>)
 
-" mom
+" These lines are for testing
 " i
 " love
 " you
 " so
 " much
-" These lines are for testing
+" mom

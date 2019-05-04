@@ -51,7 +51,7 @@ Boom, you should get:
 
 Or, you can use the range-transpose syntax
 
-`:2,6Tp`
+`:2,6T`
 
 I actually used the plugin to do that btw
 
