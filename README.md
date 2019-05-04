@@ -49,6 +49,10 @@ Boom, you should get:
 2~ love
 ```
 
+Or, you can use the range-transpose syntax
+
+`:2,6Tp`
+
 I actually used the plugin to do that btw
 
 Good luck
