@@ -1,27 +1,19 @@
 # Swapie 
-## I can't believe this doesn't already exist
-
-**Swapie** is a terrible vim plugin I made because *nothing. like it. exists.*
-
-I literally can't believe that, but whatever
+### Swapie adds `:T` for swapping lines in the spirit of `:m` and `:t` 
 
 ## Installing
 
-I use dein, and if it's later than 2014 you should too.
+Install **Swapie** the [tpope](http://github.com/tpope) way:
+```
+mkdir -p ~/.vim/pack/tpope/start
+cd ~/.vim/pack/tpope/start
+git clone https://tpope.io/vim/surround.git
+vim -u NONE -c "helptags surround/doc" -c q
+```
 
-first add `call dein#add('ianfabs/swapie.vim')` to your `.vimrc` or whathaveyou.
-
-then call `:call dein#update()` from inside vim
-
-exit vim
-
-reopen vim
-
-that should be it
+Or install **Swapie** with your favorite package manager and `'ianfabs/swapie.vim'`
 
 ## Using
-
-Here is an example txt file:
 
 ```txt
 1~ I
@@ -32,11 +24,7 @@ Here is an example txt file:
 6~ mom
 ```
 
-from vim, hit <Shift-:>
-
-in there, type the following
-
-`:Swap 2 6`
+`:2,6T`
 
 Boom, you should get:
 
@@ -49,10 +37,12 @@ Boom, you should get:
 2~ love
 ```
 
-Or, you can use the range-transpose syntax
+(I actually used the plugin to do that btw)
 
-`:2,6T`
+## Related
+This section, and a lot of the README, is thanks to the generous support of **kiryph** and **zemja**
+.
 
-I actually used the plugin to do that btw
-
-Good luck
+ - [vim-exchange](http://github.com/tommcdo/vim-exchange)
+ - [vim-LineLuggler](http://github.com/inkarkat/vim-LineJuggler)
+ - [vim-LineLugglerCommands](http://github.com/inkarkat/vim-LineJugglerCommands)
